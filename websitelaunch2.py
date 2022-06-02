@@ -20,9 +20,6 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 from streamlit_option_menu import option_menu 
-import turtle
-from turtle import color
-import tkinter as TK
 
 
 st.set_page_config(page_title="My Website",layout="wide")
