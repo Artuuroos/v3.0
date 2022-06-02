@@ -36,39 +36,7 @@ optionen2 = option_menu(menu_title=None,
                        )
 if optionen2=="Home":
     st.write("Homepage")
-    
-else:
-    if optionen2=="Diagramm":
-        with st.sidebar:
-            optionenside= option_menu(menu_title=None,
-            options=["Liniendiagramm","Säulendiagramm"],
-            icons=["graph-up","bar-chart-line"],
-            menu_icon="",
-            default_index=0,
-            orientation="vertical",
-        )
-        if optionenside=="Liniendiagramm":
-            st.write("Hier kommt ein Liniendiagramm hin")
-            with st.form(key='form1'):
-                submit_button2 = st.form_submit_button(label='Graph ansehen')
-                if submit_button2:
-                    st.write("Knopf gedrückt")
-                    
-        else:
-            
-            st.write("Hier kommt ein Säulendiagramm hin")
-            with st.form(key='form1'):
-                submit_button1 = st.form_submit_button(label='Graph ansehen')
-                if submit_button1:
-                    st.write("Säulendiagramm angezeigt")  
-                    
-    if optionen2=="Price":
-        st.write("Preisantizipation")
-        
-    if optionen2=="Notifi":
-        st.markdown("Benachrichtigung")          
-
-st.write("Digital Lab")
+    st.write("Digital Lab")
 optionliste = ["",'Darmstadt Hbf',
 "Wiesbaden Hbf",
 "Hanau Hbf",
@@ -208,8 +176,41 @@ st.write("Bahnkarte:", bahnkarteneu)
 zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
 st.write("Ihr Zielbahhof ist:", zielbahn)
 
+    
+else:
+    if optionen2=="Diagramm":
+        with st.sidebar:
+            optionenside= option_menu(menu_title=None,
+            options=["Liniendiagramm","Säulendiagramm"],
+            icons=["graph-up","bar-chart-line"],
+            menu_icon="",
+            default_index=0,
+            orientation="vertical",
+        )
+        if optionenside=="Liniendiagramm":
+            st.write("Hier kommt ein Liniendiagramm hin")
+            with st.form(key='form1'):
+                submit_button2 = st.form_submit_button(label='Graph ansehen')
+                if submit_button2:
+                    st.write("Knopf gedrückt")
+                    
+        else:
+            
+            st.write("Hier kommt ein Säulendiagramm hin")
+            with st.form(key='form1'):
+                submit_button1 = st.form_submit_button(label='Graph ansehen')
+                if submit_button1:
+                    st.write("Säulendiagramm angezeigt")  
+                    
+    if optionen2=="Price":
+        st.write("Preisantizipation")
+        
+    if optionen2=="Notifi":
+        st.markdown("Benachrichtigung")          
+
 with st.form(key='form1'):
     submit_button = st.form_submit_button(label='Submit')
+    
 if submit_button:
   start=option
   ziel=zielbahn
@@ -218,19 +219,7 @@ if submit_button:
   uhrzeit_minuten=str(uhrzeit_minuten1)
 
   uhrzeit_minuten=str(uhrzeit_minuten1)
-  
-
-#alter_f=str(list(range(15,5,-1)))
-#alter_y=str(list(range(26,13,-1)))
-#alter_e=str(list(range(64,26,-1)))
-#alter_s=str(list(range(110,64,-1)))
-
-
-#uhrzeit_stunde= input("Uhrzeit(Stunde): ")
-#uhrzeit_minuten= input("Uhrzeit(Minuten): ")
-#alter_1=input("Wie alt sind sie? ") 
-    
-if alter_1 in range(15,5,-1):
+  if alter_1 in range(15,5,-1):
         alter="f"
 else: 
     if alter_1 in range(26,13,-1): 
@@ -291,3 +280,6 @@ while True:
             
             
  
+
+  
+
