@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
+import tkinter
 
 optionen2 = option_menu(menu_title=None,
                        options=["Home","Diagramm","Price","Notifi"],
