@@ -176,7 +176,7 @@ if optionen2=="Home":
     zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
     st.write("Ihr Zielbahhof ist:", zielbahn)
     with st.form(key='form1'):
-    submit_button = st.form_submit_button(label='Submit')
+      submit_button = st.form_submit_button(label='Submit')
     
     if submit_button:
       start=option
