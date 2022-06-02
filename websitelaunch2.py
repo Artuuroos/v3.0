@@ -200,7 +200,7 @@ if optionen2=="Home":
 
       if bahnkarteneu=="50":
         bahnkarte="4"
-       else: 
+      else: 
         if bahnkarteneu=="25":
                 bahnkarte="2"
         else: 
