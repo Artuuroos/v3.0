@@ -1,12 +1,10 @@
 import turtle
 from turtle import color
 import streamlit as st
-import plotly.figure_factory as ff
 import numpy as np
 import pandas as pd
-import plotly.express as px
 from streamlit_option_menu import option_menu
-import tkinter as tk
+
 
 
 optionen2 = option_menu(menu_title=None,
