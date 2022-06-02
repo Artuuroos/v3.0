@@ -7,4 +7,4 @@ plotly==5.2.2
 requests==2.26.0
 streamlit==1.9.2
 lib==4.0.0
-tkinter==8.6.0
+
