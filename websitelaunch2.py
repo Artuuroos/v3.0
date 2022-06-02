@@ -37,146 +37,146 @@ optionen2 = option_menu(menu_title=None,
 if optionen2=="Home":
     st.write("Homepage")
     st.write("Digital Lab")
-optionliste = ["",'Darmstadt Hbf',
-"Wiesbaden Hbf",
-"Hanau Hbf",
-"Frankenthal Hbf",
-"Kaiserslautern Hbf",
-"Pirmasens Hbf",
-"Speyer Hbf",
-"Zweibrücken Hbf",
-"Kassel Hbf",
-"Boppard Hbf",
-"Koblenz Hbf",
-"Wittlich Hbf",
-"Mainz Hbf",
-"Worms Hbf",
-"Saarbrücken Hbf",
-"Saarlouis Hbf",
-"Trier Hbf",
-"Braunschweig Hbf",
-"Hildesheim Hbf",
-"Wolfsburg Hbf",
-"Bremen Hbf",
-"Bremerhaven Hbf",
-"Emden Hbf",
-"Osnabrück Hbf",
-"Hamburg Hbf",
-"Hannover Hbf",
-"Kiel Hbf",
-"Lübeck Hbf",
-"Cottbus Hbf",
-"Brandenburg Hbf",
-"Eberswalde Hbf",
-"Potsdam Hbf",
-"Neustrelitz Hbf",
-"Rostock Hbf",
-"Stralsund Hbf",
-"Schwerin Hbf",
-"Augsburg Hbf",
-"Lindau Hbf",
-"Bayreuth Hbf",
-"Hof Hbf",
-"München Hbf",
-"Nürnberg Hbf",
-"Deggendorf Hbf",
-"Passau Hbf",
-"Regensburg Hbf",
-"Berchtesgaden Hbf",
-"Ingolstadt Hbf",
-"Aschaffenburg Hbf",
-"Schweinfurt Hbf",
-"Würzburg Hbf",
-"Chemnitz Hbf",
-"Gera Hbf",
-"Dresden Hbf",
-"Arnstadt Hbf",
-"Erfurt Hbf",
-"Merseburg Hbf",
-"Döbeln Hbf",
-"Leipzig Hbf",
-"Bernburg Hbf",
-"Dessau Hbf",
-"Magdeburg Hbf",
-"Stendal Hbf",
-"Thale Hbf",
-"Wernigerode Hbf",
-"Lörrach Hbf",
-"Reutlingen Hbf",
-"Tübingen Hbf",
-"Freudenstadt Hbf",
-"Karlsruhe Hbf",
-"Pforzheim Hbf",
-"Bad Friedrichshall Hbf",
-"Heidelberg Hbf",
-"Heilbronn Hbf",
-"Mannheim Hbf",
-"Öhringen Hbf",
-"Stuttgart Hbf",
-"Aalen Hbf",
-"Ulm Hbf",
-"Bielefeld Hbf",
-"Gütersloh Hbf",
-"Paderborn Hbf",
-"Dortmund Hbf",
-"Lünen Hbf",
-"Bottrop Hbf",
-"Duisburg Hbf",
-"Krefeld Hbf",
-"Oberhausen Hbf",
-"Aachen Hbf",
-"Düsseldorf Hbf",
-"Eschweiler Hbf",
-"Gevelsberg Hbf",
-"Mönchengladbach Hbf",
-"Neuss Hbf",
-"Remscheid Hbf",
-"Rheydt Hbf",
-"Solingen Hbf",
-"Wuppertal Hbf",
-"Bochum Hbf",
-"Castrop-Rauxel Hbf",
-"Essen Hbf",
-"Gelsenkirchen Hbf",
-"Wanne-Eickel Hbf",
-"Witten Hbf",
-"Hagen Hbf",
-"Siegen Hbf",
-"Bonn Hbf",
-"Köln Hbf",
-"Recklinghausen Hbf"
-]
+    optionliste = ["",'Darmstadt Hbf',
+    "Wiesbaden Hbf",
+    "Hanau Hbf",
+    "Frankenthal Hbf",
+    "Kaiserslautern Hbf",
+    "Pirmasens Hbf",
+    "Speyer Hbf",
+    "Zweibrücken Hbf",
+    "Kassel Hbf",
+    "Boppard Hbf",
+    "Koblenz Hbf",
+    "Wittlich Hbf",
+    "Mainz Hbf",
+    "Worms Hbf",
+    "Saarbrücken Hbf",
+    "Saarlouis Hbf",
+    "Trier Hbf",
+    "Braunschweig Hbf",
+    "Hildesheim Hbf",
+    "Wolfsburg Hbf",
+    "Bremen Hbf",
+    "Bremerhaven Hbf",
+    "Emden Hbf",
+    "Osnabrück Hbf",
+    "Hamburg Hbf",
+    "Hannover Hbf",
+    "Kiel Hbf",
+    "Lübeck Hbf",
+    "Cottbus Hbf",
+    "Brandenburg Hbf",
+    "Eberswalde Hbf",
+    "Potsdam Hbf",
+    "Neustrelitz Hbf",
+    "Rostock Hbf",
+    "Stralsund Hbf",
+    "Schwerin Hbf",
+    "Augsburg Hbf",
+    "Lindau Hbf",
+    "Bayreuth Hbf",
+    "Hof Hbf",
+    "München Hbf",
+    "Nürnberg Hbf",
+    "Deggendorf Hbf",
+    "Passau Hbf",
+    "Regensburg Hbf",
+    "Berchtesgaden Hbf",
+    "Ingolstadt Hbf",
+    "Aschaffenburg Hbf",
+    "Schweinfurt Hbf",
+    "Würzburg Hbf",
+    "Chemnitz Hbf",
+    "Gera Hbf",
+    "Dresden Hbf",
+    "Arnstadt Hbf",
+    "Erfurt Hbf",
+    "Merseburg Hbf",
+    "Döbeln Hbf",
+    "Leipzig Hbf",
+    "Bernburg Hbf",
+    "Dessau Hbf",
+    "Magdeburg Hbf",
+    "Stendal Hbf",
+    "Thale Hbf",
+    "Wernigerode Hbf",
+    "Lörrach Hbf",
+    "Reutlingen Hbf",
+    "Tübingen Hbf",
+    "Freudenstadt Hbf",
+    "Karlsruhe Hbf",
+    "Pforzheim Hbf",
+    "Bad Friedrichshall Hbf",
+    "Heidelberg Hbf",
+    "Heilbronn Hbf",
+    "Mannheim Hbf",
+    "Öhringen Hbf",
+    "Stuttgart Hbf",
+    "Aalen Hbf",
+    "Ulm Hbf",
+    "Bielefeld Hbf",
+    "Gütersloh Hbf",
+    "Paderborn Hbf",
+    "Dortmund Hbf",
+    "Lünen Hbf",
+    "Bottrop Hbf",
+    "Duisburg Hbf",
+    "Krefeld Hbf",
+    "Oberhausen Hbf",
+    "Aachen Hbf",
+    "Düsseldorf Hbf",
+    "Eschweiler Hbf",
+    "Gevelsberg Hbf",
+    "Mönchengladbach Hbf",
+    "Neuss Hbf",
+    "Remscheid Hbf",
+    "Rheydt Hbf",
+    "Solingen Hbf",
+    "Wuppertal Hbf",
+    "Bochum Hbf",
+    "Castrop-Rauxel Hbf",
+    "Essen Hbf",
+    "Gelsenkirchen Hbf",
+    "Wanne-Eickel Hbf",
+    "Witten Hbf",
+    "Hagen Hbf",
+    "Siegen Hbf",
+    "Bonn Hbf",
+    "Köln Hbf",
+    "Recklinghausen Hbf"
+    ]
 
-bahnkarteliste=["25","50","nein"]
-optionliste.sort()
+    bahnkarteliste=["25","50","nein"]
+    optionliste.sort()
 
-option = st.selectbox('Startbahnhof auswählen', optionliste)
-st.write('Zielbahnhof ist:', option)
-
-
-losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
-st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
-                                  
-
-uhrzeit_stunde1=st.number_input("Stunde: ", min_value=1,max_value=24,step=1)
-st.write("Stunde: ", uhrzeit_stunde1)
+    option = st.selectbox('Startbahnhof auswählen', optionliste)
+    st.write('Zielbahnhof ist:', option)
 
 
-uhrzeit_minuten1=st.number_input("Minute: ",min_value=1,max_value=59,step=1) 
-st.write("Minute: ", uhrzeit_minuten1)
+    losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
+    st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
 
 
-alter_1=st.number_input("Alter: ",min_value=1,max_value=110,step=1) 
-st.write("Alter: ", alter_1)
+    uhrzeit_stunde1=st.number_input("Stunde: ", min_value=1,max_value=24,step=1)
+    st.write("Stunde: ", uhrzeit_stunde1)
 
 
-bahnkarteneu=st.selectbox("Bahnkarte:", bahnkarteliste)
-st.write("Bahnkarte:", bahnkarteneu)
+    uhrzeit_minuten1=st.number_input("Minute: ",min_value=1,max_value=59,step=1) 
+    st.write("Minute: ", uhrzeit_minuten1)
 
-zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
-st.write("Ihr Zielbahhof ist:", zielbahn)
 
-    
+    alter_1=st.number_input("Alter: ",min_value=1,max_value=110,step=1) 
+    st.write("Alter: ", alter_1)
+
+
+    bahnkarteneu=st.selectbox("Bahnkarte:", bahnkarteliste)
+    st.write("Bahnkarte:", bahnkarteneu)
+
+    zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
+    st.write("Ihr Zielbahhof ist:", zielbahn)
+
+
 else:
     if optionen2=="Diagramm":
         with st.sidebar:
