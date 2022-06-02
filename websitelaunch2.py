@@ -1,3 +1,4 @@
+import turtle
 from turtle import color
 import streamlit as st
 import plotly.figure_factory as ff
