@@ -28,15 +28,14 @@ st.set_page_config(page_title="My Website",layout="wide")
 
 
 optionen2 = option_menu(menu_title=None,
-                       options=["Home","Diagramm","Price","Notifi"],
+                       options=["Home","Diagramm","Preisantizipation","Email-Benachrichtigung"],
                        icons=["house","graph-up","clock","alarm"],
                        menu_icon="cast",
                        default_index=0,
                        orientation="horizontal",
                        )
 if optionen2=="Home":
-    st.write("Homepage")
-    st.write("Digital Lab")
+    
     optionliste = ["",'Darmstadt Hbf',
     "Wiesbaden Hbf",
     "Hanau Hbf",
