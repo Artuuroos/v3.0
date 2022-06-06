@@ -25,8 +25,8 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title="My Website",layout="wide")
 
 
-st.subheader("Hi unsere Website")
-st.title("Datenanalyse")
+st.subheader("DB Ticker App")
+st.title("Homepage")
 optionen2 = option_menu(menu_title=None,
                        options=["Home","Diagramm","Price","Notifi"],
                        icons=["house","graph-up","clock","alarm"],
@@ -146,37 +146,40 @@ if optionen2=="Home":
     "Köln Hbf",
     "Recklinghausen Hbf"
     ]
-
+    col1,col2,col3=st.columns(3)
+    
     bahnkarteliste=["25","50","nein"]
     optionliste.sort()
-
-    option = st.selectbox('Startbahnhof auswählen', optionliste)
-    st.write('Zielbahnhof ist:', option)
-
-
-    losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
-    st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
-
-
-    uhrzeit_stunde1=st.number_input("Stunde: ", min_value=1,max_value=24,step=1)
-    st.write("Stunde: ", uhrzeit_stunde1)
-
-
-    uhrzeit_minuten1=st.number_input("Minute: ",min_value=1,max_value=59,step=1) 
-    st.write("Minute: ", uhrzeit_minuten1)
+    
+    with col1:
+      st.title("Bahnhof")
+      option = st.selectbox('Startbahnhof auswählen', optionliste)
+      st.write('Zielbahnhof ist:', option)
+      zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
+      st.write("Ihr Zielbahhof ist:", zielbahn)
+    with col2:
+      st.title("Abfahrt")
+      losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
+      st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
 
 
-    alter_1=st.number_input("Alter: ",min_value=1,max_value=110,step=1) 
-    st.write("Alter: ", alter_1)
+      uhrzeit_stunde1=st.number_input("Stunde: ", min_value=1,max_value=24,step=1)
+      st.write("Stunde: ", uhrzeit_stunde1)
 
 
-    bahnkarteneu=st.selectbox("Bahnkarte:", bahnkarteliste)
-    st.write("Bahnkarte:", bahnkarteneu)
+      uhrzeit_minuten1=st.number_input("Minute: ",min_value=1,max_value=59,step=1) 
+      st.write("Minute: ", uhrzeit_minuten1)
 
-    zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
-    st.write("Ihr Zielbahhof ist:", zielbahn)
+    with col3:
+      st.title("Alter & Bahnkarte")
+      alter_1=st.number_input("Alter: ",min_value=1,max_value=110,step=1) 
+      st.write("Alter: ", alter_1)
+
+      bahnkarteneu=st.selectbox("Bahnkarte:", bahnkarteliste)
+      st.write("Bahnkarte:", bahnkarteneu)
+      
     with st.form(key='form1'):
-      submit_button = st.form_submit_button(label='Submit')
+      submit_button = st.form_submit_button(label='Bestätigen')
     
     if submit_button:
       start=option
