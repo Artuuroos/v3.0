@@ -20,13 +20,13 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 from streamlit_option_menu import option_menu 
+import yagmail
 
 
 st.set_page_config(page_title="My Website",layout="wide")
 
 
-st.subheader("DB Ticker App")
-st.title("Homepage")
+
 optionen2 = option_menu(menu_title=None,
                        options=["Home","Diagramm","Price","Notifi"],
                        icons=["house","graph-up","clock","alarm"],
@@ -146,19 +146,21 @@ if optionen2=="Home":
     "Köln Hbf",
     "Recklinghausen Hbf"
     ]
+    st.title("DB Ticker App")
+    st.header("Homepage")
     col1,col2,col3=st.columns(3)
     
     bahnkarteliste=["25","50","nein"]
     optionliste.sort()
     
     with col1:
-      st.title("Bahnhof")
+      st.subheader("Bahnhof")
       option = st.selectbox('Startbahnhof auswählen', optionliste)
       st.write('Zielbahnhof ist:', option)
       zielbahn=st.selectbox("Zielbahnhof auswählen", optionliste)
       st.write("Ihr Zielbahhof ist:", zielbahn)
     with col2:
-      st.title("Abfahrt")
+      st.subheader("Abfahrt")
       losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
       st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
 
@@ -171,7 +173,7 @@ if optionen2=="Home":
       st.write("Minute: ", uhrzeit_minuten1)
 
     with col3:
-      st.title("Alter & Bahnkarte")
+      st.subheader("Alter & Bahnkarte")
       alter_1=st.number_input("Alter: ",min_value=1,max_value=110,step=1) 
       st.write("Alter: ", alter_1)
 
@@ -275,6 +277,42 @@ else:
     if optionen2=="Price":
         st.write("Preisantizipation")
         
-    if optionen2=="Notifi":
-        st.markdown("Benachrichtigung")          
+    if optionen2=="Email-Benachrichtigung":
+        st.subheader("Benachrichtigung anfordern")
+        emailteil1=st.text_input("Emailnamen eingeben")
+        emaildomains=["@gmail.com","@gmx.de","@web.de"]
+
+        option = st.selectbox('Email Domain auswählen', emaildomains)
+        ganzeemail=emailteil1+option
+
+        port = 587  # For starttls
+        smtp_server = "smtp.gmail.com"
+        yag = yagmail.SMTP("dbtickeralert@gmail.com","ujbdfkbgqwbjemrh")
+        contents = [
+        "Ein neuer Preis ihrer Verbindung ist verfuegbar."
+        "\n"
+        "Kaufen Sie sich ein Ticket."
+        "\n"
+
+        "Freundlicher Gruss"
+        "\n"
+        "\n"
+        "DBTickeralert"
+        ]
+        liste=[1,2,3,4,5,6,7,8,9,10]
+
+                
+        preisangabe = st.slider("Ihr gewünschter Höchstpreis:")
+        with st.form(key='form1'):
+                submit_buttonpreis = st.form_submit_button(label='Benachrichtige mich')    
+                if submit_buttonpreis:
+                    st.write("Sie erhalten eine Email Benachrichtigung wenn sich der Preis unter",preisangabe ,"€ befindet") 
+                    for i in range(len(liste)):
+                      if liste[i]<=preisangabe:
+                        yag.send(to=ganzeemail,
+                        subject='Neuer Preis',
+                        contents=contents)
+                      else:
+                        if preisangabe>liste[i]:
+                          st.write("Ihre Kaufbereitschaft ist sehr hoch")        
 
