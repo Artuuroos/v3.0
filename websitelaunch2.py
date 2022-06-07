@@ -23,10 +23,10 @@ from streamlit_option_menu import option_menu
 import yagmail
 
 
-st.set_page_config(page_title="My Website",layout="wide")
+st.set_page_config(page_title="DB Ticker",layout="wide")
 
 
-
+st.title("DB Ticker App")
 optionen2 = option_menu(menu_title=None,
                        options=["Home","Diagramm","Preisantizipation","Email-Benachrichtigung"],
                        icons=["house","graph-up","clock","alarm"],
@@ -145,7 +145,7 @@ if optionen2=="Home":
     "Köln Hbf",
     "Recklinghausen Hbf"
     ]
-    st.title("DB Ticker App")
+    
     st.header("Homepage")
     col1,col2,col3=st.columns(3)
     
