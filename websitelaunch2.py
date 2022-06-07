@@ -314,6 +314,6 @@ else:
                       else:
                         if preisangabe>liste[i]:
                           st.write("Ihre Kaufbereitschaft ist sehr hoch")   
-     if optionen2=="Kontakt":
+    if optionen2=="Kontakt":
       st.write("Kontakt")
 
