@@ -162,8 +162,8 @@ if optionen2=="Home":
       st.subheader("Abfahrt")
       losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
       st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
-      value=losdatum.strftime("%H")),
-      value1=losdatum.strftime("%M")),
+      value=losdatum.strftime("%H"),
+      value1=losdatum.strftime("%M"),
       st.write("Stunde",value)
       st.write("Minute",value1)
       
