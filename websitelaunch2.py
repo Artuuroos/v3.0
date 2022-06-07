@@ -149,7 +149,7 @@ if optionen2=="Home":
     st.header("Homepage")
     col1,col2,col3=st.columns(3)
     
-    bahnkarteliste=["","25","50","nein"]
+    bahnkarteliste=["","25","50","Nein"]
     optionliste.sort()
     
     with col1:
