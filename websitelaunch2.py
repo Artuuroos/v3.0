@@ -28,8 +28,8 @@ st.set_page_config(page_title="DB Ticker",layout="wide")
 
 st.title("DB Ticker App")
 optionen2 = option_menu(menu_title=None,
-                       options=["Home","Diagramm","Preisantizipation","Email-Benachrichtigung"],
-                       icons=["house","graph-up","clock","alarm"],
+                       options=["Home","Diagramm","Preisantizipation","Email-Benachrichtigung", "Kontakt"],
+                       icons=["house","graph-up","clock","alarm","person"],
                        menu_icon="cast",
                        default_index=0,
                        orientation="horizontal",
@@ -273,7 +273,7 @@ else:
                 if submit_button1:
                     st.write("Säulendiagramm angezeigt")  
                     
-    if optionen2=="Price":
+    if optionen2=="Preisantizipation":
         st.write("Preisantizipation")
         
     if optionen2=="Email-Benachrichtigung":
@@ -313,5 +313,7 @@ else:
                         contents=contents)
                       else:
                         if preisangabe>liste[i]:
-                          st.write("Ihre Kaufbereitschaft ist sehr hoch")        
+                          st.write("Ihre Kaufbereitschaft ist sehr hoch")   
+     if optionen2=="Kontakt":
+      st.write("Kontakt")
 
