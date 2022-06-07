@@ -163,12 +163,12 @@ if optionen2=="Home":
       losdatum=st.date_input('Datum', value= pd.to_datetime("today"))
       st.write("Datum:", losdatum.strftime("%d.%m.%Y"))
 
-
-      uhrzeit_stunde1=st.number_input("Stunde: ", min_value=1,max_value=24,step=1)
+      
+      uhrzeit_stunde1=st.number_input("Stunde: ", min_value=1,value=losdatum.strftime("%H"),max_value=24,step=1)
       st.write("Stunde: ", uhrzeit_stunde1)
 
 
-      uhrzeit_minuten1=st.number_input("Minute: ",min_value=1,max_value=59,step=1) 
+      uhrzeit_minuten1=st.number_input("Minute: ",min_value=1,value=losdatum.strftime("%M"),max_value=59,step=1) 
       st.write("Minute: ", uhrzeit_minuten1)
 
     with col3:
