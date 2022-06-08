@@ -245,9 +245,9 @@ if optionen2=="Home":
                 print("Art des Zuges/der Züge: ",art_zug_zv1)
                 print("Die Verbindung kostet: ",sparpreis_zv1)
                 
-                data=[anfrage,alter_1,bahnkarteneu,start,ziel,datum,abfahrt_zv1,ankunft_zv1,art_zug_zv1,sparpreis2_zv1]
-                col=["Anfrage","Alter","Bahnkarte","Start","Ziel","Datum","Abfahrt","Ankunft","Art","Preis"]
-                 print(tabulate(data,headers=col))
+                data=[anfrage,alter_1,bahnkarteneu,start,ziel,datum,abfahrt_zv1,ankunft_zv1,art_zug_zv1,sparpreis2_zv1],
+                col=["Anfrage","Alter","Bahnkarte","Start","Ziel","Datum","Abfahrt","Ankunft","Art","Preis"],
+                print(tabulate(data,headers=col))
 
             sleep(18)
 
