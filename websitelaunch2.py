@@ -247,7 +247,7 @@ if optionen2=="Home":
                 
                 data=[anfrage,alter_1,bahnkarteneu,start,ziel,datum,abfahrt_zv1,ankunft_zv1,art_zug_zv1,sparpreis2_zv1]
                 col=["Anfrage","Alter","Bahnkarte","Start","Ziel","Datum","Abfahrt","Ankunft","Art","Preis"]
-                st.write(tabulate(data,headers=col))
+                 print(tabulate(data,headers=col))
 
             sleep(18)
 
