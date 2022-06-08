@@ -8,4 +8,4 @@ requests==2.26.0
 streamlit==1.9.2
 lib==4.0.0
 yagmail==0.15.277
-tabulate=0.8.9
+tabulate==0.8.9
