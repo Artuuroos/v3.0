@@ -21,6 +21,7 @@ import plotly.figure_factory as ff
 import numpy as np
 from streamlit_option_menu import option_menu 
 import yagmail
+from dbtable import *
 
 
 st.set_page_config(page_title="DB Ticker",layout="wide")
@@ -245,11 +246,13 @@ if optionen2=="Home":
                 print("Art des Zuges/der Züge: ",art_zug_zv1)
                 print("Die Verbindung kostet: ",sparpreis_zv1)
                 
-                data=[anfrage,alter_1,bahnkarteneu,start,ziel,datum,abfahrt_zv1,ankunft_zv1,art_zug_zv1,sparpreis2_zv1],
-                col=["Anfrage","Alter","Bahnkarte","Start","Ziel","Datum","Abfahrt","Ankunft","Art","Preis"],
-                print(tabulate(data,headers=col))
+               
 
-            sleep(18)
+                persons = DbTable('persons',["Anfrage","Alter","Bahnkarte","Start","Ziel","Datum","Abfahrt","Ankunft","Art","Preis"]) 
+                persons.insert(anfrage,alter_1,bahnkarteneu,start,ziel,datum,abfahrt_zv1,ankunft_zv1,art_zug_zv1,sparpreis2_zv1)
+                persons.printTable()
+                DbTable.save('schule.db')   
+                sleep(18)
 
 
 else:
