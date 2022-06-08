@@ -248,11 +248,7 @@ if optionen2=="Home":
                 
                
 
-                persons = DbTable('persons',["Anfrage","Alter","Bahnkarte","Start","Ziel","Datum","Abfahrt","Ankunft","Art","Preis"]) 
-                persons.insert(anfrage,alter_1,bahnkarteneu,start,ziel,datum,abfahrt_zv1,ankunft_zv1,art_zug_zv1,sparpreis2_zv1)
-                persons.printTable()
-                DbTable.save('schule.db')   
-                sleep(18)
+               
 
 
 else:
@@ -323,5 +319,6 @@ else:
                         if preisangabe>liste[i]:
                           st.write("Ihre Kaufbereitschaft ist sehr hoch")   
     if optionen2=="Kontakt":
-      st.write("Kontakt")
+      st.subheader("Digital Lab Gruppe 4")
+      
 
