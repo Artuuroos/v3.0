@@ -21,7 +21,7 @@ import plotly.figure_factory as ff
 import numpy as np
 from streamlit_option_menu import option_menu 
 import yagmail
-from dbtable import *
+from dbTable import *
 
 
 st.set_page_config(page_title="DB Ticker",layout="wide")
