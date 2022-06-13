@@ -10,6 +10,5 @@ lib==4.0.0
 yagmail==0.15.277
 tabulate==0.8.9
 dbTable==0.0.4
-psycopg2==2.9.3
 psycopg2-binary==2.9.3
 setuptools==58.0.4
