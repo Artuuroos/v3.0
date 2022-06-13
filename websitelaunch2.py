@@ -22,6 +22,15 @@ import numpy as np
 from streamlit_option_menu import option_menu 
 import yagmail
 from dbTable import *
+from http.client import CONFLICT
+from re import X
+from telnetlib import DO
+from typing import Collection
+import psycopg2
+import psycopg2.extras
+from sqlalchemy import create_engine
+import pandas   
+
 
 
 st.set_page_config(page_title="DB Ticker",layout="wide")
@@ -29,8 +38,8 @@ st.set_page_config(page_title="DB Ticker",layout="wide")
 
 st.title("DB Ticker App")
 optionen2 = option_menu(menu_title=None,
-                       options=["Home","Diagramm","Preisantizipation","Email-Benachrichtigung", "Kontakt"],
-                       icons=["house","graph-up","clock","alarm","person"],
+                       options=["Home","Diagramm","Preisantizipation","Email-Benachrichtigung", "Kontakt","Konto-Erstellung"],
+                       icons=["house","graph-up","clock","alarm","person","person"],
                        menu_icon="cast",
                        default_index=0,
                        orientation="horizontal",
@@ -320,5 +329,28 @@ else:
                           st.write("Ihre Kaufbereitschaft ist sehr hoch")   
     if optionen2=="Kontakt":
       st.subheader("Digital Lab Gruppe 4")
+    if optionen2=="Konto-Erstellung":
+      conn = psycopg2.connect(host ="dpg-cajo73sgqg428kba9ikg-a.frankfurt-postgres.render.com",
+                        database="dbticket", 
+                        user="dbticket_user", 
+                        password="Nhaema5GzFDyW3j0sGHVYjfhRBu0fTvy")
+
+        engine = create_engine('postgresql://dbticket_user:Nhaema5GzFDyW3j0sGHVYjfhRBu0fTvy@dpg-cajo73sgqg428kba9ikg-a.frankfurt-postgres.render.com/dbticket')
+        cursor = conn.cursor()
+        eingabe=st.text_input("Username:")
+        passw=st.text_input("Passwort:",type="password")
+        wunsch=st.text_input("Wunsch: ")
+        
+        def add_userdata(eingabe,passw):
+            result=pandas.DataFrame(columns=["username","passwort"])   
+            result.loc[len(result)]=[eingabe,passw]
+            result.to_sql(name=wunsch, con=engine, if_exists="append")
+            result=result[0:0]
+            with st.form(key='form1'):
+                submit_button3 = st.form_submit_button(label='Registrieren')
+                if submit_button3:
+                    add_userdata(eingabe,passw)   
+           
+   
       
 
